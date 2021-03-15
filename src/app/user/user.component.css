@@ -4,11 +4,11 @@
 /* BASIC */
 
 html {
-  background: #56baed;
+  background-color: #56baed;
 }
 
 body {
-  /* font-family: sans-serif; */
+  font-family: sans-serif;
   height: 100vh;
 }
 
@@ -27,6 +27,7 @@ h2 {
   display:inline-block;
   margin: 40px 8px 10px 8px; 
   color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 

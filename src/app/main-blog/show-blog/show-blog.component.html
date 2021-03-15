@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <div id="formContent">
+<div>
+<ul>
+  <li><a routerLink="/Blog" >Home</a></li>
+  <li><a routerLink="/dashboard" >Post a new Blog</a></li>
+  <li id="logout" (click)="onLogout()"><a>Logout</a></li>
+</ul>
+<router-outlet></router-outlet>
+</div>
+
+<div class="header">
+    <h2>Blog</h2>
+  </div>
+  <div class="cardCenter">
+  <div class="card">
+   <div class="container">
+      <h4><b>Blog Title</b></h4>
+      <p id="more">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit velit quibusdam ad dicta voluptatem ea beatae magni dolor nihil corporis incidunt, accusantium provident. Reprehenderit dolorem quis natus ratione, esse quasi!</p>
+      <!-- <button (click)="toshowBlog()">To show current Blog</button> -->
+      <span>
+      <input type="text" name="comment" placeholder="Write Your Comment" [(ngModel)]="newcomment.content">
+        <button (click)="postComment(blog._id)">Post Comment</button>
+     </span> 
+
+      <div *ngFor="let comment of (blog?.comments)">
+        <h4>Comment: {{comment.content}}</h4>
+         <div *ngFor="let reply of (comment?.comments)"> 
+          <h5>Reply: {{reply.content}}</h5>
+        </div>
+        <span>
+  
+        <button (click)="comment.hideme=!comment.hideme" id="bt" style="background-color:lightgreen;font-size: 16px; color:black; border-radius: 5px; border: white;">
+          {{buttonName}}
+      </button>
+      
+      <div [hidden]="!comment.hideme">
+          <div style="margin: 5px auto;text-align: center;">
+              <div>
+                  <div><input type="text" [(ngModel)]="replycomment.content" /></div>
+                  <button style="margin: 5px auto;text-align: center; background-color:green; color: white;" (click)="onDoreply(blog._id,comment._id)">Submit Reply</button> 
+              </div>
+          </div>
+      </div>
+        
+        </span>
+        
+      </div>
+     
+      
+    </div>
+ 
+    
+      
+    </div>
+  </div>
+  </div>
+</div>

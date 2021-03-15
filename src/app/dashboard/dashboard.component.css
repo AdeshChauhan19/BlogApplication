@@ -1,0 +1,128 @@
+body {
+  padding-top: 56px;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+
+
+body {
+  padding-top: 56px;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+
+
+body {
+font-family: Arial;
+padding: 20px;
+background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+padding: 5px;
+font-size: 40px;
+text-align: center;
+background: white;
+}
+
+.card {
+/* Add shadows to create the "card" effect */
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+transition: 0.3s;
+align-content: center;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+padding: 2px 16px;
+text-align: center;
+}
+
+/* input{
+width: 50%;
+text-align: center;
+} */
+
+#logout{
+float: right;
+cursor: pointer;
+}
+h4{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.textArea{
+padding: 20px;
+text-align: center;
+}
+textarea{
+  width: 50%;
+  text-align: center;
+  height: 200px;
+}
+label{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+#titleBlog{
+  width: 20%;
+  height: 30px;
+}
+button{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  width: 10%;
+}

@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins'); */
 
 /* BASIC */
 
 html {
-  background: #56baed;
+  background-color: #56baed;
 }
 
 body {
-  /* font-family: sans-serif; */
+  /* font-family:  sans-serif; */
   height: 100vh;
 }
 
@@ -397,4 +397,12 @@ td.text-center {
 
 td.text-right {
   text-align: right;
+}
+button{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+button.value{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
 }

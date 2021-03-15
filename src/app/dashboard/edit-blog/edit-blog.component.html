@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div id="formContent">
+<form #postForm="ngForm" (submit)="updateBlogSubmit()" >
+   <div>
+        <ul>
+        <li><a routerLink="/Blog" >Home</a></li>
+        <li><a routerLink="/dashboard" >Post a new Blog</a></li>
+        <li id="logout" (click)="onLogout()"><a>Logout</a></li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="textArea">
+        <label for="title">Title</label>
+        <br>
+        <textarea id="titleBlog" #title="ngModel" [(ngModel)]="blog.title" name="title" placeholder="Write Your Blog Title"></textarea>
+        <br>
+        <label for="description">Description</label>
+        <br>
+        <textarea #description="ngModel" [(ngModel)]="blog.description" name="description" placeholder="Write your Blog"></textarea>
+        <br>
+        <input type="submit" value="Post Blog">
+       </div>
+</form>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div id="formContent">
+<div>
+<ul>
+  <li><a routerLink="/Blog" >Home</a></li>
+  <li><a routerLink="/dashboard" >Post a new Blog</a></li>
+  <li id="logout" (click)="Logout()"><a>Logout</a></li>
+</ul>
+<router-outlet></router-outlet>
+</div>
+
+<div class="header">
+    <h2>Blogs</h2>
+  </div>
+  <div class="cardCenter">
+  <div class="card" *ngFor="let card of demos; let j=index;">
+   <div class="container">
+      <h4><b>{{card.title}}</b></h4>
+      <p>{{card.description}}</p>
+      <span>
+       <a [routerLink]="['/BlogOne', card.id]"><button type="button" name="button" class="btn btn-sm btn-info">Read More</button></a>
+      </span>
+    </div>
+      
+    </div>
+  </div>
+  </div>
+  
+</div>
+
+

@@ -1,0 +1,34 @@
+<!-- <div class="wrapper">
+    <div id="formContent">
+      <input type="button" (click)="onLogout()" value="Logout">
+<ul>
+    <li>
+      <li *ngFor="let card of credentials; let j=index">
+        <div class="card">
+          <p class="price">{{card.description}}</p>
+          <span><button (click)="onApproved(card)">Approved</button></span>
+        </div>
+      </li>
+    </ul>
+    
+</div>
+</div> -->
+<div class="wrapper">
+  <div id="formContent">
+<div>
+  <ul>
+  <!-- <li><a routerLink="/Blog" >Home</a></li> -->
+  <li><a routerLink="/dashboardAdmin" >ApproveBlogs</a></li>
+  <li id="logout" (click)="onLogout()"><a>Logout</a></li>
+  </ul>
+  <router-outlet></router-outlet>
+  </div>
+  <div class="card" *ngFor="let card of credentials; let j=index">
+    <div class="container">
+       <h4><b>{{card.title}}</b></h4>
+       <p>{{card.description}}</p>
+       <span><button (click)="onApproved(card)">Approved</button></span>
+    </div>
+    </div>
+    </div>
+    </div>

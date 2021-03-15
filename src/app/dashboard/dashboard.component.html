@@ -1,0 +1,93 @@
+<!-- <div class="wrapper">
+    <div id="formContent">
+      <form #postForm="ngForm" (ngSubmit)="writeBlog()">
+    <input type="button" (click)="onLogout()" value="Logout">
+    <input type="button" (click)="onHome()" value="Home">
+    <input type="text" #post="ngModel" [(ngModel)]="blog.description"  name="post" placeholder="Write Your Blog">
+    <input type="submit" value="Post Blog">
+    <br>
+    
+</form>
+<ul>
+<li *ngFor="let card of credentials; let j=index">
+  <div class="card">
+    <p class="price">
+      {{card.description}}
+    </p>
+    <div class="row">
+       <div class="column">
+     <span>
+     <a [routerLink]="['/Blog', card._id]"><button type="button" name="button" class="btn btn-sm btn-info">Edit</button></a>
+     <router-outlet></router-outlet>
+    </span>
+    <span>
+     <a><button type="button" name="button" class="btn btn-sm btn-info" (click)="onDelete(card)">Delete</button></a>
+    </span>
+  </div>
+  </div>
+    </div>
+  </li>
+</ul>
+<div class="success" *ngIf="showSucessMessage">
+    Saved successfully
+  </div>
+<div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+</div>
+</div>
+</div> -->
+
+
+<!-- <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)"> -->
+<!-- <input type="button" (click)="getBlog()"> -->
+<!-- <input #val (click)="onEditPost(card._id, val.target.value)" style="border: none;" value="{{card.description}}" /> -->
+<!-- <span><button (click)="edit(card._id,j)">Edit</button></span> -->
+<!-- <span><button>Edit</button></span> -->
+<!-- <span><button (click)="onDelete(card)">Delete</button></span> -->
+<!-- this.myForm.patchValue(this.resData.cdata[0]); -->
+
+
+<div class="wrapper">
+  <div id="formContent">
+<div>
+<ul>
+<li><a routerLink="/Blog" >Home</a></li>
+<li><a routerLink="/dashboard" >Post a new Blog</a></li>
+<li id="logout" (click)="onLogout()"><a>Logout</a></li>
+</ul>
+<router-outlet></router-outlet>
+</div>
+<form #postForm="ngForm" (ngSubmit)="writeBlog()">
+ <div class="textArea">
+  <label for="title">Title</label>
+  <br>
+  <textarea id="titleBlog" #title="ngModel" [(ngModel)]="blog.title" name="title" placeholder="Write Your Blog Title" required></textarea>
+  <br>
+  <label for="description">Description</label>
+  <br>
+  <textarea #description="ngModel" [(ngModel)]="blog.description" name="description" placeholder="Write your Blog" required></textarea>
+  <br>
+  <input type="submit" value="Post Blog">
+ </div>
+</form>
+<div style="margin-left: 42%;" class="alert" *ngIf="serverErrorMessages">
+  {{serverErrorMessages}}
+</div>
+<div class="header">
+  <h2>Blogs</h2>
+</div>
+<div class="card" *ngFor="let card of credentials; let j=index">
+ <div class="container">
+    <h4 ><b>{{card.title}}</b></h4>
+    <p >{{card.description}}</p>
+    <span>
+      <a [routerLink]="['/Blog', card._id]"><button type="button" name="button" class="btn btn-sm btn-info">Edit</button></a>
+      <router-outlet></router-outlet>
+     </span>
+     <span>
+      <a><button type="button" name="button" class="btn btn-sm btn-info" (click)="onDelete(card)">Delete</button></a>
+     </span>
+    </div>
+    </div>
+</div>
+</div>
